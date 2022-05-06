@@ -53,8 +53,12 @@ h1 {
     font-size: 2em;
 }
 
-/*make visited links the same as unvisited links*/
+/*make color of visited links the same as parent color*/
 a:visited {
+    color:inherit;
+}
+/*make color of visited links the same as parent color*/
+a:default {
     color:inherit;
 }
 
