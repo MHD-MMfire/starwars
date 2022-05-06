@@ -53,13 +53,9 @@ h1 {
     font-size: 2em;
 }
 
-/*make color of visited links the same as parent color*/
-a:visited {
-    color:inherit;
-}
-/*make color of links the same as parent color*/
-a:link {
-    color:inherit;
+/*change the color of links*/
+a:link, a:hover, a:active, a:visited {
+    color:brown;
 }
 
 /*---ONLY IN MOVIES PAGE---*/
