@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--defining charset and viewport properties-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--page tab title-->
+    <title>Star Wars</title>
+    <!--external css-->
+    <link rel="stylesheet" type="text/css" href="resources/main.css">
+</head>
+
+<body>
+
+<!--the center box wrapper-->
+<div class="content">
+    <div class="wrapper">
+        <div class="starship">
+            <div>
+                <!--title text-->
+                <h1>Starships</h1>
+
+                <!--starships name list-->
+                <ul id="starship_list">
+<!--                    <li>-->
+<!--                        <button onclick="getStarShip('https://swapi.dev/api/starships/2/')">CR90 corvette</button>-->
+<!--                    </li>-->
+                </ul>
+            </div>
+
+            <!--link area-->
+            <div>
+                <div id="pagination" class="pagination">
+                    <button>&lt</button>
+<!--                    <button>1</button>-->
+                    <button>&gt</button>
+                </div>
+                <div class="back">
+                    <a href="index.html">Back to Movies</a>
+                </div>
+            </div>
+        </div>
+        <div id="starship" class="hidden">
+            <!--starship name-->
+            <h2>CR90 corvette</h2>
+            <!--starship properties-->
+            <ul>
+                <li>CR90 corvette</li>
+                <li>Corellian Engineering Corporation</li>
+                <li>30-165</li>
+                <li>600</li>
+                <li>A New Hope</li>
+                <li>Return of the Jedi</li>
+                <li>Revenge of the Sith</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--external js-->
+<script type="text/javascript" src="resources/main.js"></script>
+</body>
+
+</html>

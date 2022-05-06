@@ -1,0 +1,137 @@
+/*---SHARED FOR ALL PAGES---*/
+
+/*selecting everything*/
+* {
+    /*borders and paddings are included in the width & height of the elements*/
+    box-sizing: border-box;
+    /*changing font family for the entire site (fallback font = sans-serif)*/
+    font-family: Arial, sans-serif;
+}
+
+/*selecting <body> tag*/
+body {
+    /*---full centralized background---*/
+    /*relative image url*/
+    background-image: url("background.jpg");
+    /*no repeating over x-axis or y-axis*/
+    background-repeat: no-repeat;
+    /*centralize background base position (on lower screens, the center of the background is always shown)*/
+    background-position: center;
+    /*background always stays fixed no matter what (e.g. in scrolling)*/
+    background-attachment: fixed;
+    /*scaling background to always cover the whole specified area (=the whole page)*/
+    background-size: cover;
+    /*font size for texts*/
+    font-size: 1.3em;
+}
+
+/*selecting class="content"*/
+/*the whole website content wrapper*/
+.content {
+    /*round corners*/
+    border-radius: 5px;
+    /*transparent box background color*/
+    background: rgba(200,200,200,0.4);
+    /*padding for better visibility*/
+    padding: 15px;
+
+    /*positioning the content in the center of the screen*/
+    position: absolute;
+    /*method 1: (50% margin from corner, and then pulling it back to counter for the element size itself)*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%) translateY(-50%);*/
+    /*method 2: 25% left + 50% width + 25% right*/
+    top: 25%;
+    left: 25%;
+    width: 50%;
+}
+
+/*selecting h1, which is a child of an element with class="content"*/
+h1 {
+    /*font size for header*/
+    font-size: 2em;
+}
+
+/*make visited links the same as unvisited links*/
+a:visited {
+    color:inherit;
+}
+
+/*---ONLY IN MOVIES PAGE---*/
+
+/*selecting class="movie"*/
+.movie {
+    /*using flex to design layout*/
+    display: flex;
+    flex-direction: row;
+    /*Movie details on the left & "Starships" button on the right*/
+    justify-content: space-between;
+}
+
+/*selecting class="episode"*/
+.episode {
+    /*changing text color*/
+    color: red;
+}
+
+/*---ONLY IN STARSHIP PAGE---*/
+
+.wrapper {
+    /*to put the Starships list on the left & starship details on the right*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h2 {
+    /*font size for starship header*/
+    font-size: 1.7em;
+    /*make this a little lower positioned than h1*/
+    padding-top: 0.3em;
+}
+
+.starship {
+    /*design to put the pagination part at the end*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*setting max width for the single starship details (on the right of the page) so the long text doesn't affect the layout much*/
+#starship {
+    max-width: 50%;
+}
+
+/*selecting class="pagination"*/
+.pagination {
+    /*designing pagination buttons layout*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*selecting class="back" for home-link*/
+.back {
+    /*space from pagination buttons*/
+    margin-top: 10px;
+    /*centralizing button*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*used in js, for showing the starship details part of the page*/
+.visible {
+    visibility: visible;
+}
+
+/*used as default in html, for hiding the starship details part of the page*/
+.hidden {
+    visibility: hidden;
+}
+
+/*used in js, for marking the current active page*/
+.active-page {
+    background-color: red;
+}
